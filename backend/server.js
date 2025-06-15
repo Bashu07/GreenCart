@@ -19,7 +19,7 @@ const app = express()
 const PORT = 5000;
 
 // Allowed multiple origins
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['http://localhost:5173','https://greencart-frontend-jade.vercel.app']
 
 // Middleware configuration
 app.use(express.json())
