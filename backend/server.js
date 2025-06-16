@@ -19,12 +19,12 @@ const app = express()
 const PORT = 5000;
 
 // Allowed multiple origins
-// const allowedOrigins = ['http://localhost:5173','https://greencart-frontend-jade.vercel.app','https://vercel.com/bashu-awasthis-projects/greencart-backend']
+const allowedOrigins = ['http://localhost:5173','https://greencart-frontend-jade.vercel.app','https://vercel.com/bashu-awasthis-projects/greencart-backend']
 
 // Middleware configuration
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({origin: allowedOrigins , credentials:true}))
 
 await connectDB()
 await connectCloudinary()
